@@ -1,0 +1,21 @@
+server.port: 8765
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  routes:
+    date-service:
+      path: /date/**
+      serviceId: date-service
+      stripPrefix: false
+    time-service:
+      path: /time/**
+      serviceId: time-service
+      stripPrefix: false
+
+ribbon:
+  ReadTimeout: 20000
+  ConnectTimeout: 20000
