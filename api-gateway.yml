@@ -19,3 +19,42 @@ zuul:
 ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
+
+hystrix
+  commands:
+    timeCommandFailsSilent:
+      circuitBreakerEnabled: true
+      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerRequestVolumeThreshold: 3
+      executionTimeoutEnabled: true
+      executionTimeoutInMilliseconds: 10000
+    dateCommandFailsSilent:
+      circuitBreakerEnabled: true
+      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerRequestVolumeThreshold: 3
+      executionTimeoutEnabled: true
+      executionTimeoutInMilliseconds: 10000
+    timeZoneCommandFailsSilent:
+      circuitBreakerEnabled: true
+      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerRequestVolumeThreshold: 3
+      executionTimeoutEnabled: true
+      executionTimeoutInMilliseconds: 100
+    dateCommandFailsStubbed:
+      circuitBreakerEnabled: true
+      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerRequestVolumeThreshold: 3
+      executionTimeoutEnabled: true
+      executionTimeoutInMilliseconds: 3000
+    timeCommandFailsStubbed:
+      circuitBreakerEnabled: true
+      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerRequestVolumeThreshold: 3
+      executionTimeoutEnabled: true
+      executionTimeoutInMilliseconds: 1000
+    timeZoneCommandFailsStubbed:
+      circuitBreakerEnabled: true
+      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerRequestVolumeThreshold: 3
+      executionTimeoutEnabled: true
+      executionTimeoutInMilliseconds: 3000
