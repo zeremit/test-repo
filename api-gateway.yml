@@ -42,7 +42,7 @@ hystrix:
       executionTimeoutInMilliseconds: 100
     dateCommandFailsStubbed:
       circuitBreakerEnabled: true
-      circuitBreakerSleepWindowInMilliseconds: 10000
+      circuitBreakerSleepWindowInMilliseconds: 1000
       circuitBreakerRequestVolumeThreshold: 3
       executionTimeoutEnabled: true
       executionTimeoutInMilliseconds: 3000
