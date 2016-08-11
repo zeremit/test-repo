@@ -20,7 +20,7 @@ ribbon:
   ReadTimeout: 20000
   ConnectTimeout: 20000
 
-hystrix
+hystrix:
   commands:
     timeCommandFailsSilent:
       circuitBreakerEnabled: true
