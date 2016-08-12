@@ -45,7 +45,7 @@ hystrix:
       circuitBreakerSleepWindowInMilliseconds: 10000
       circuitBreakerRequestVolumeThreshold: 3
       executionTimeoutEnabled: true
-      executionTimeoutInMilliseconds: 3000
+      executionTimeoutInMilliseconds: 1000
     timeCommandFailsStubbed:
       circuitBreakerEnabled: true
       circuitBreakerSleepWindowInMilliseconds: 10000
