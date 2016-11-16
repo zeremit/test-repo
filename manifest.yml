@@ -1,8 +1,9 @@
 ---
 applications:
-- name: cf-ex-phpmyadmin
+- name: phpMyAdmin
+  host: sqladmin
   memory: 128M
   instances: 1
   path: .
   services:
-  - mysql
+  - sqladmin
